@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* "Vibrant Political" Theme - Light, Impactful, Energetic */
+
+    /* Base - Clean Professional White */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 210 40% 98%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Primary: Tactical Political Red */
+    --primary: 0 84% 48%;
+    /* Vibrant Red */
+    --primary-foreground: 210 40% 98%;
+
+    /* Secondary: Election Yellow/Gold */
+    --secondary: 48 96% 53%;
+    /* Bold Yellow */
+    --secondary-foreground: 222 47% 11%;
+
+    /* Accent: Success Green */
+    --accent: 142 76% 36%;
+    --accent-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 0 84% 48%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 5rem;
+    /* 80px - Offset for fixed header */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-slate-600;
+    background-color: white;
+    background-image: none;
+    font-family: var(--font-inter), sans-serif;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll on mobile */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sans font-bold tracking-tight text-slate-900;
+  }
+}
+
+@layer utilities {
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-400;
+  }
+
+  .text-gradient-orange {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-red-500;
+  }
+
+  /* Glass Card Effect for Dark Mode */
+  .glass-card {
+    @apply bg-slate-900/60 backdrop-blur-md border border-white/10 shadow-2xl;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:border-primary/50;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 30px -5px rgba(59, 130, 246, 0.3);
+  }
+
+  /* Impressive Animations */
+  @keyframes spotlight-sweep {
+    0% {
+      background-position: 0% 50%;
+      opacity: 0.5;
+    }
+
+    50% {
+      background-position: 100% 50%;
+      opacity: 1;
+    }
+
+    100% {
+      background-position: 0% 50%;
+      opacity: 0.5;
+    }
+  }
+
+  .animate-spotlight {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background-size: 200% 100%;
+    animation: spotlight-sweep 3s infinite linear;
+  }
+}
