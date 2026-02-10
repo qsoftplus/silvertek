@@ -69,26 +69,22 @@ export function SiteHeader() {
               variant="ghost"
               size="icon"
               className={cn(
-                "md:hidden hover:bg-white/10 z-50", 
-                isScrolled ? "text-slate-900" : "text-white"
+                "md:hidden z-50 transition-colors", 
+                isScrolled 
+                  ? "text-slate-900 hover:bg-slate-100 hover:text-slate-900" 
+                  : "text-white hover:bg-white/10 hover:text-white"
               )}
             >
               <Menu className="h-8 w-8" />
               <span className="sr-only">Toggle Menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-full sm:w-[400px] border-l-0 bg-slate-900 text-white p-0">
-             {/* Mobile Menu Backdrop & Content */}
-             <div className="flex flex-col h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-slate-800 via-slate-900 to-slate-950 px-6 py-8 relative overflow-hidden">
-                {/* Decorative BG elements */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[80px] -mr-32 -mt-32 pointer-events-none"></div>
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 rounded-full blur-[80px] -ml-32 -mb-32 pointer-events-none"></div>
-
+          <SheetContent side="right" className="w-full sm:w-[400px] border-l border-slate-100 bg-white/95 backdrop-blur-xl text-slate-900 p-0 shadow-2xl">
+             <div className="flex flex-col h-full px-6 py-8 relative overflow-hidden">
                 <div className="flex items-center justify-between mb-12 relative z-10">
                    <div className="flex items-center gap-3">
-                      <SilvertekLogo className="h-12 w-auto" textColor="text-white" />
+                      <SilvertekLogo className="h-10 w-auto" textColor="text-slate-900" />
                    </div>
-                   {/* Close button is handled by Sheet primitive, but we can customize if needed */}
                 </div>
 
                 <nav className="flex flex-col items-center justify-center gap-6 flex-1 relative z-10">
@@ -96,7 +92,7 @@ export function SiteHeader() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="text-3xl font-bold text-slate-300 hover:text-white hover:scale-105 transition-all duration-300"
+                      className="text-2xl font-bold text-slate-800 hover:text-primary hover:scale-105 transition-all duration-300"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
@@ -105,12 +101,12 @@ export function SiteHeader() {
                 </nav>
 
                 <div className="flex flex-col gap-4 mt-auto relative z-10">
-                   <Button className="w-full h-14 rounded-xl text-lg font-bold bg-primary text-white hover:bg-primary/90 shadow-xl shadow-primary/20" asChild>
+                   <Button className="w-full h-12 rounded-xl text-base font-bold bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/20" asChild>
                     <Link href="tel:+919176726175">
                        Call Now
                     </Link>
                   </Button>
-                  <Button variant="outline" className="w-full h-14 rounded-xl text-lg font-bold bg-white/5 text-white border-white/10 hover:bg-white/10 hover:text-white" asChild>
+                  <Button variant="outline" className="w-full h-12 rounded-xl text-base font-bold bg-slate-50 text-slate-900 border-slate-200 hover:bg-slate-100" asChild>
                     <Link href="https://wa.me/919176726175">
                       WhatsApp
                     </Link>

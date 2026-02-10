@@ -23,13 +23,13 @@ import { Button } from '@/components/ui/button';
 // Enhanced dataset
 // Enhanced dataset
 const projectImages = [
-  { src: '/images/hq_project1.png', alt: 'Premium Campaign Isuzu', tag: 'Exterior' },
+  { src: '/images/project_1_enhanced.png', alt: 'Premium Campaign Isuzu', tag: 'Exterior' },
   { src: '/images/hq_project6.png', alt: 'Rear Platform Design', tag: 'Interior' },
   { src: '/images/hq_project2.png', alt: 'Night Lighting Setup', tag: 'Lighting' },
   { src: '/images/hq_project3.png', alt: 'High-Fidelity Audio', tag: 'Sound' },
   { src: '/images/hq_project4.png', alt: 'Side Profile', tag: 'Exterior' },
 
-  { src: '/images/hq_project5_edited.png', alt: 'Custom Front Bumper', tag: 'Modification' },
+  { src: '/images/project_5_natural.png', alt: 'Custom Front Bumper', tag: 'Modification' },
 ];
 
 export function ProjectGallery() {
@@ -39,7 +39,7 @@ export function ProjectGallery() {
     <>
       {/* REAL FIELD WORKS */}
       <section 
-        className="py-16 md:py-24 relative bg-white" 
+        className="py-12 md:py-24 relative bg-white" 
         id="gallery"
       >
         <div className="container px-4 relative z-10">
@@ -61,6 +61,7 @@ export function ProjectGallery() {
                       src={image.src}
                       alt={image.alt}
                       fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex flex-col justify-end p-6">
@@ -114,30 +115,34 @@ export function HeroCarousel() {
                      <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 z-10 pt-20">
                          <div className="animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-100 max-w-5xl mx-auto">
                            {/* Campaign Badge */}
-                           <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-secondary/90 text-slate-900 text-xs md:text-sm font-bold mb-6 md:mb-8 shadow-xl border border-white/20">
-                             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/90 text-slate-900 text-[10px] sm:text-xs md:text-sm font-bold mb-4 md:mb-8 shadow-xl border border-white/20 backdrop-blur-sm">
+                             <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-primary animate-pulse" />
                              Voter Outreach Specialists
                            </span>
                            
-                           <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tight mb-6 md:mb-8 leading-[1.1] drop-shadow-2xl">
+                           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tight mb-4 md:mb-8 leading-[1.05] drop-shadow-2xl px-2">
                              Command the <span className="text-secondary">Campaign.</span>
                            </h1>
                            
-                           <p className="text-lg md:text-2xl text-white/90 max-w-3xl mx-auto font-medium leading-relaxed mb-8 md:mb-12 drop-shadow-lg px-4">
+                           <p className="text-base sm:text-lg md:text-2xl text-white/90 max-w-3xl mx-auto font-medium leading-relaxed mb-8 md:mb-12 drop-shadow-lg px-4 hidden sm:block">
                              Integrated solutions for <span className="text-secondary font-bold">Political Victory</span>. <br className="hidden md:block"/>High-Decibel Engineering.
                            </p>
+
+                           <p className="text-sm text-white/90 max-w-xs mx-auto font-medium leading-relaxed mb-6 drop-shadow-lg px-2 sm:hidden">
+                             Integrated solutions for <span className="text-secondary font-bold">Political Victory</span>.
+                           </p>
                            
-                           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center w-full px-4">
-                             <Button size="lg" className="w-full sm:w-auto rounded-full text-base md:text-lg font-bold px-8 md:px-10 h-14 md:h-16 bg-secondary text-slate-900 hover:bg-white transition-all hover:scale-105 shadow-xl border-0" asChild>
+                           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center w-full px-4 max-w-sm sm:max-w-none mx-auto">
+                             <Button size="lg" className="w-full sm:w-auto rounded-full text-sm sm:text-base md:text-lg font-bold px-6 py-6 md:px-10 h-auto md:h-16 bg-secondary text-slate-900 hover:bg-white transition-all hover:scale-105 shadow-xl border-0" asChild>
                                <Link 
                                  href="https://www.google.com/maps/place/silvertek+car+accessories/@11.0207519,76.9692348,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba858fa0cc7e39d:0x15a46f9f3f2b2b76!8m2!3d11.0207519!4d76.9718097!16s%2Fg%2F11cjg5f235?entry=ttu&g_ep=EgoyMDI2MDIwMS4wIKXMDSoASAFQAw%3D%3D"
                                  target="_blank"
                                  rel="noopener noreferrer"
                                >
-                                 <MapPin className="mr-2 h-5 w-5 md:h-6 md:w-6" /> Visit Workshop
+                                 <MapPin className="mr-2 h-4 w-4 md:h-6 md:w-6" /> Visit Workshop
                                </Link>
                              </Button>
-                             <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full text-base md:text-lg font-bold px-8 md:px-10 h-14 md:h-16 bg-white/10 text-white border-white/30 hover:bg-white hover:text-primary backdrop-blur-md transition-all hover:scale-105" asChild>
+                             <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full text-sm sm:text-base md:text-lg font-bold px-6 py-6 md:px-10 h-auto md:h-16 bg-white/10 text-white border-white/30 hover:bg-white hover:text-primary backdrop-blur-md transition-all hover:scale-105" asChild>
                                <Link href="#gallery">Our Design</Link>
                              </Button>
                            </div>

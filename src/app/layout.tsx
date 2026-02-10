@@ -10,10 +10,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Silvertek | #1 Election Campaign Vehicle Customization in Coimbatore & Tamil Nadu",
+    default: "Silvertek | Election Campaign Vehicle Modification Coimbatore",
     template: "%s | Silvertek Automotive"
   },
-  description: "Premier election campaign vehicle modification shop in Coimbatore. We specialize in customizing political campaign jeeps with high-end audio, LED screens, tactical wraps, and smart technology. Serving all of Tamil Nadu since 2012.",
+  description: "Specialized election campaign vehicle customization in Coimbatore. We build high-tech political campaign jeeps with tactical audio, LED displays, and custom wraps. Serving Tamil Nadu.",
   keywords: [
     // Core Services
     "Election campaign vehicle modification", "Political campaign vehicle customization", "Election vehicle customization Coimbatore",
@@ -58,25 +58,53 @@ export const metadata: Metadata = {
     "Get election campaign vehicle modified Tamil Nadu", "Affordable campaign vehicle customization", "Where to modify political campaign vehicles",
     "Book your election campaign vehicle Coimbatore", "Digital election campaign vehicles Tamil Nadu", "Election campaign vehicles smart technology",
     "AI-powered election campaign jeeps", "Live streaming election campaign vehicles", "Best political vehicle customization trends 2026",
-    "Car Accessories Coimbatore", "Android stereo system car", "Car Scuff plates", "Car Seat covers Coimbatore"
+    "Car Accessories Coimbatore", "Android stereo system car", "Car Scuff plates", "Car Seat covers Coimbatore",
+    
+    // Brand & Competitor Targeting (Advanced SEO)
+    "Silvertek", "Silvertek Coimbatore", "Silvertek Tamil Nadu", "Silvertek Automotive",
+    "Jeep Club Tamil Nadu alternative", "Jeep Clinic Coimbatore alternative", 
+    "Best political jeep maker in Tamil Nadu", "Campaign jeeps for elections in Tamil Nadu",
+    "Which vehicle is best for political rallies in Tamil Nadu",
+    
+    // Political Parties & Leaders (High Search Volume)
+    "DMK campaign vehicle", "AIADMK election jeep", "BJP Tamil Nadu campaign car", "NTK Seeman campaign van",
+    "TVK Vijay political vehicle", "Congress election jeep Tamil Nadu", "VCK campaign vehicle",
+    "M.K. Stalin campaign van design", "Edappadi K. Palaniswami campaign jeep", "Annamalai BJP campaign car",
+    "Thol. Thirumavalavan campaign vehicle", "Kamal Haasan campaign vehicle",
+    
+    // Major Cities Targeting
+    "Coimbatore", "Chennai", "Madurai", "Salem", "Tiruppur", "Trichy", "Erode", "Tirunelveli", "Vellore", "Kancheepuram"
   ],
   authors: [{ name: "Silvertek Automotive" }],
   creator: "Silvertek",
   publisher: "Silvertek",
   category: "Automotive",
   applicationName: "Silvertek Campaign Vehicles",
+  metadataBase: new URL('https://silvertek.in'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: "Silvertek | Premier Election Campaign Vehicle Customization",
-    description: "Transform your political campaign with Silvertek's high-tech vehicle modifications. Expert jeep customization, LED displays, and premium audio systems in Coimbatore.",
+    description: "Transform your political campaign with Silvertek's high-tech vehicle modifications. Expert jeep customization, LED displays, and premium audio systems.",
     url: "https://silvertek.in",
     siteName: "Silvertek",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: '/images/gallery2.png',
+        width: 1200,
+        height: 630,
+        alt: 'Silvertek Campaign Vehicle',
+      }
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Silvertek - Election Campaign Specialists",
     description: "The #1 choice for political vehicle customization in Tamil Nadu.",
+    images: ['/images/gallery2.png'],
   },
   robots: {
     index: true,
@@ -90,11 +118,14 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "google-site-verification-token", // Placeholder, user can update
+    google: "google-site-verification-token",
   },
-  alternates: {
-    canonical: "https://silvertek.in",
-  },
+  other: {
+    "geo.region": "IN-TN",
+    "geo.placename": "Coimbatore",
+    "geo.position": "11.020752;76.969235",
+    "ICBM": "11.020752, 76.969235"
+  }
 };
 
 import { FloatingActions } from "@/components/floating-actions";
@@ -104,8 +135,56 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AutoBodyShop",
+    "name": "Silvertek Automotive",
+    "image": "https://silvertek.in/images/gallery2.png",
+    "@id": "https://silvertek.in",
+    "url": "https://silvertek.in",
+    "telephone": "+919176726175",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "317, Venkatasamy Rd, Siddhapudur",
+      "addressLocality": "Coimbatore",
+      "addressRegion": "TN",
+      "postalCode": "641044",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 11.0207519,
+      "longitude": 76.9692348
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    "sameAs": [
+      "https://www.facebook.com/share/1G7ebdyvtT/",
+      "https://www.instagram.com/silvertekcar?igsh=ZmV5MjY3dHBjNmty",
+      "https://IndiaMART.in/jAEBDB0q"
+    ],
+    "priceRange": "$$"
+  };
+
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${inter.variable} font-sans antialiased text-slate-800 bg-white`}
       >

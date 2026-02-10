@@ -16,8 +16,8 @@ export function SiteFooter() {
       />
       
       {/* Content */}
-      <div className="container px-4 relative z-10">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 mb-16">
+      <div className="container px-6 relative z-10">
+        <div className="grid gap-8 md:gap-12 md:grid-cols-2 lg:grid-cols-4 mb-12 md:mb-16">
           <div className="space-y-6">
             <Link href="/" className="inline-block group">
                <SilvertekLogo className="h-10 w-auto" />

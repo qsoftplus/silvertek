@@ -136,7 +136,7 @@ export default function Home() {
         {/* SERVICES SECTION */}
         <section 
           id="services" 
-          className="py-16 md:py-24 relative overflow-hidden bg-white"
+          className="py-12 md:py-24 relative overflow-hidden bg-white"
         >
           {/* Subtle Political Accents */}
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[100px] -mr-64 -mt-64"></div>
@@ -177,7 +177,7 @@ export default function Home() {
               <ServiceCard 
                  icon={<CheckCircle2 className="h-6 w-6 text-white" strokeWidth={2.5} />}
                  title="Mobile Stage"
-                 description="Heavy duty steel base platform for 360°"
+                 description="Heavy duty steel base platform for 360° candidate visibility"
                  className="bg-sky-50/80 hover:bg-sky-100/80"
               />
               <ServiceCard 
@@ -189,7 +189,7 @@ export default function Home() {
               <ServiceCard 
                  icon={<Gauge className="h-6 w-6 text-white" strokeWidth={2.5} />}
                  title="Power Guard"
-                 description="Silent inbuilt generator systems for uninterrupted 48-hour campaign runs."
+                 description="Silent fuel base generator systems for uninterrupted campaign runs."
                  className="bg-indigo-50/80 hover:bg-indigo-100/80"
               />
             </div>
@@ -197,7 +197,7 @@ export default function Home() {
         </section>
 
         {/* GENERAL AUTOMOTIVE SERVICES */}
-        <section className="py-16 md:py-24 relative overflow-hidden" id="car-care">
+        <section className="py-12 md:py-24 relative overflow-hidden" id="car-care">
           {/* Background Image */}
           <div 
             className="absolute inset-0 z-0 opacity-20 pointer-events-none mix-blend-multiply"
@@ -289,7 +289,7 @@ export default function Home() {
         {/* HISTORY / ABOUT */}
         <section 
            id="about" 
-           className="py-16 md:py-24 relative bg-white"
+           className="py-12 md:py-24 relative bg-white"
         >
            <div className="container px-4 relative z-10">
               <div className="bg-slate-50 rounded-[2.5rem] p-6 md:p-12 border border-slate-100 overflow-hidden relative group shadow-sm">
@@ -308,7 +308,7 @@ export default function Home() {
                           Transforming ordinary four wheelers into powerful election campaign vehicles for Tamil Nadu politics. We provide comprehensive vehicle modification, campaign van remodeling, and political vehicle customization. From low-cost solutions to premium setups, we offer high-quality workshop services for election promotions.
                         </p>
                         <p>
-                          We specialize in rally vehicle setup, party campaign van design, sound system installation, LED branding, sticker wrapping, and creative political advertising for <strong className="text-slate-900 font-extrabold">DMK, ADMK, BJP, NTK, TVK</strong>, and other katchi campaigns. If you are a political campaign coordinator, rally organizer, or promotion team looking for affordable and reliable campaign vehicle modification in Tamil Nadu, Silvertek is here for you.
+                          We specialize in rally vehicle setup, party campaign van design, sound system installation, LED branding, sticker wrapping, and creative political advertising for <strong className="text-slate-900 font-extrabold">all political campaigns</strong>. If you are a political campaign coordinator, rally organizer, or promotion team looking for affordable and reliable campaign vehicle modification in Tamil Nadu, Silvertek is here for you.
                         </p>
                         <p>
                           Our designs are field-tested for the harsh realities of roadshows. We prioritize <strong className="text-slate-900">"Neat & Clean"</strong> aesthetics that project professionalism and stability.
@@ -334,8 +334,9 @@ export default function Home() {
                     <div className="order-1 lg:order-2 relative h-[300px] md:h-[450px] lg:h-[550px] w-full rounded-3xl overflow-hidden shadow-2xl ring-1 ring-slate-200 transform transition-transform duration-700 hover:scale-[1.02]">
                        <Image 
                          src="/images/gallery2.png" 
-                         alt="About Silvertek"
+                         alt="Silvertek Workshop Audio Demo Room and Office"
                          fill
+                         sizes="(max-width: 1024px) 100vw, 50vw"
                          className="object-cover"
                        />
                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent flex items-end p-8">
@@ -351,7 +352,7 @@ export default function Home() {
         </section>
 
         {/* PRE-FOOTER CTA */}
-        <section className="py-16 md:py-24 bg-slate-50 text-center relative overflow-hidden">
+        <section className="py-12 md:py-24 bg-slate-50 text-center relative overflow-hidden">
           <div className="container px-4 relative z-10 max-w-4xl mx-auto">
              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
                Ready to Launch Your Campaign?
@@ -366,7 +367,7 @@ export default function Home() {
                      Talk to an Expert
                    </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="rounded-full h-14 px-10 text-base font-bold bg-white text-slate-900 border-slate-200 hover:bg-slate-50 transition-all hover:scale-105 w-full sm:w-auto" asChild>
+                <Button size="lg" variant="outline" className="rounded-full h-14 px-10 text-base font-bold bg-white text-slate-900 border-slate-200 hover:bg-slate-100 hover:text-slate-900 transition-all hover:scale-105 w-full sm:w-auto" asChild>
                   <Link href="https://wa.me/919176726175">
                     WhatsApp Us
                   </Link>
