@@ -97,6 +97,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { FloatingActions } from "@/components/floating-actions";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -108,6 +110,7 @@ export default function RootLayout({
         className={`${inter.variable} font-sans antialiased text-slate-800 bg-white`}
       >
         {children}
+        <FloatingActions />
       </body>
     </html>
   );

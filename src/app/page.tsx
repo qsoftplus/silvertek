@@ -177,7 +177,7 @@ export default function Home() {
               <ServiceCard 
                  icon={<CheckCircle2 className="h-6 w-6 text-white" strokeWidth={2.5} />}
                  title="Mobile Stage"
-                 description="Heavy-duty hydraulic lift platforms for 360-degree candidate visibility."
+                 description="Heavy duty steel base platform for 360°"
                  className="bg-sky-50/80 hover:bg-sky-100/80"
               />
               <ServiceCard 
@@ -214,7 +214,7 @@ export default function Home() {
                  Complete <span className="text-primary">Automotive Care</span>
                </h2>
                <p className="text-slate-600 font-medium">
-                 Beyond campaign vehicles, we provide premium accessories and expert repair services for all passenger cars.
+                 Beyond campaign vehicles, we are making modification of vehicles with premium accessories and expert repairing service for all passenger cars
                </p>
             </div>
 
@@ -262,7 +262,7 @@ export default function Home() {
                    </p>
                    <ul className="text-sm font-bold text-slate-700 space-y-2 mb-4 w-full text-left pl-4 md:pl-8">
                      <li className="flex items-center gap-3"><CheckCircle2 className="h-4 w-4 text-primary shrink-0" strokeWidth={3} /> Seat Covers & Floor Mats</li>
-                     <li className="flex items-center gap-3"><CheckCircle2 className="h-4 w-4 text-primary shrink-0" strokeWidth={3} /> Horn Replacement</li>
+                     <li className="flex items-center gap-3"><CheckCircle2 className="h-4 w-4 text-primary shrink-0" strokeWidth={3} /> Horn installation</li>
                      <li className="flex items-center gap-3"><CheckCircle2 className="h-4 w-4 text-primary shrink-0" strokeWidth={3} /> General Accessories</li>
                    </ul>
                 </div>
@@ -305,7 +305,10 @@ export default function Home() {
                       </h2>
                       <div className="space-y-6 text-slate-600 text-lg leading-relaxed font-medium">
                         <p>
-                          Silvertek isn't just a workshop; it's a political campaign partner. With roots dating back to 2002 and official establishment in 2012, we understand the pulse of Tamil Nadu politics.
+                          Transforming ordinary four wheelers into powerful election campaign vehicles for Tamil Nadu politics. We provide comprehensive vehicle modification, campaign van remodeling, and political vehicle customization. From low-cost solutions to premium setups, we offer high-quality workshop services for election promotions.
+                        </p>
+                        <p>
+                          We specialize in rally vehicle setup, party campaign van design, sound system installation, LED branding, sticker wrapping, and creative political advertising for <strong className="text-slate-900 font-extrabold">DMK, ADMK, BJP, NTK, TVK</strong>, and other katchi campaigns. If you are a political campaign coordinator, rally organizer, or promotion team looking for affordable and reliable campaign vehicle modification in Tamil Nadu, Silvertek is here for you.
                         </p>
                         <p>
                           Our designs are field-tested for the harsh realities of roadshows. We prioritize <strong className="text-slate-900">"Neat & Clean"</strong> aesthetics that project professionalism and stability.

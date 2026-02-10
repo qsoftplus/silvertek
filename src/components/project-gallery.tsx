@@ -28,7 +28,8 @@ const projectImages = [
   { src: '/images/hq_project2.png', alt: 'Night Lighting Setup', tag: 'Lighting' },
   { src: '/images/hq_project3.png', alt: 'High-Fidelity Audio', tag: 'Sound' },
   { src: '/images/hq_project4.png', alt: 'Side Profile', tag: 'Exterior' },
-  { src: '/images/hq_project5.png', alt: 'Custom Front Bumper', tag: 'Modification' },
+
+  { src: '/images/hq_project5_edited.png', alt: 'Custom Front Bumper', tag: 'Modification' },
 ];
 
 export function ProjectGallery() {
@@ -137,7 +138,7 @@ export function HeroCarousel() {
                                </Link>
                              </Button>
                              <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full text-base md:text-lg font-bold px-8 md:px-10 h-14 md:h-16 bg-white/10 text-white border-white/30 hover:bg-white hover:text-primary backdrop-blur-md transition-all hover:scale-105" asChild>
-                               <Link href="#gallery">The Fleet</Link>
+                               <Link href="#gallery">Our Design</Link>
                              </Button>
                            </div>
                          </div>
