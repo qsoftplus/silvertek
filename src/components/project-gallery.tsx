@@ -3,7 +3,7 @@
 import * as React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { X, ZoomIn, MapPin } from 'lucide-react';
+import { X, ZoomIn } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -133,16 +133,8 @@ export function HeroCarousel() {
                            </p>
                            
                            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center w-full px-4 max-w-sm sm:max-w-none mx-auto">
-                             <Button size="lg" className="w-full sm:w-auto rounded-full text-sm sm:text-base md:text-lg font-bold px-6 py-6 md:px-10 h-auto md:h-16 bg-secondary text-slate-900 hover:bg-white transition-all hover:scale-105 shadow-xl border-0" asChild>
-                               <Link 
-                                 href="https://www.google.com/maps/place/silvertek+car+accessories/@11.0207519,76.9692348,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba858fa0cc7e39d:0x15a46f9f3f2b2b76!8m2!3d11.0207519!4d76.9718097!16s%2Fg%2F11cjg5f235?entry=ttu&g_ep=EgoyMDI2MDIwMS4wIKXMDSoASAFQAw%3D%3D"
-                                 target="_blank"
-                                 rel="noopener noreferrer"
-                               >
-                                 <MapPin className="mr-2 h-4 w-4 md:h-6 md:w-6" /> Visit Workshop
-                               </Link>
-                             </Button>
-                             <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full text-sm sm:text-base md:text-lg font-bold px-6 py-6 md:px-10 h-auto md:h-16 bg-white/10 text-white border-white/30 hover:bg-white hover:text-primary backdrop-blur-md transition-all hover:scale-105" asChild>
+
+                             <Button size="lg" variant="outline" className="w-auto rounded-full text-xs sm:text-base md:text-lg font-bold px-8 h-10 sm:h-12 md:h-16 md:px-10 bg-white/10 text-white border-white/30 hover:bg-white hover:text-primary backdrop-blur-md transition-all hover:scale-105" asChild>
                                <Link href="#gallery">Our Design</Link>
                              </Button>
                            </div>

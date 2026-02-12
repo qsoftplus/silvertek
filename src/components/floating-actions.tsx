@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import { Phone } from 'lucide-react';
+import { Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -42,6 +42,22 @@ export function FloatingActions() {
       >
         <Link href="tel:+919176726175" aria-label="Talk to an Expert">
           <Phone className="h-6 w-6 text-white text-fill-current" strokeWidth={2.5} />
+        </Link>
+      </Button>
+
+      {/* Visit Workshop Button */}
+      <Button
+        size="icon"
+        className="h-14 w-14 rounded-full bg-secondary hover:bg-secondary/90 text-slate-900 shadow-lg shadow-secondary/30 transition-all hover:scale-110 active:scale-95"
+        asChild
+      >
+        <Link 
+          href="https://www.google.com/maps/place/silvertek+car+accessories/@11.0207519,76.9692348,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba858fa0cc7e39d:0x15a46f9f3f2b2b76!8m2!3d11.0207519!4d76.9718097!16s%2Fg%2F11cjg5f235?entry=ttu&g_ep=EgoyMDI2MDIwMS4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank" 
+          rel="noopener noreferrer"
+          aria-label="Visit Workshop"
+        >
+          <MapPin className="h-7 w-7" strokeWidth={2.5} />
         </Link>
       </Button>
     </div>
